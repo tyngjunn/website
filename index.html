@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Wildlife Fund Australia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/themes/light.css" >
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/icon-button/icon-button.js"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img class="hero-image" src="Images/mountains.avif" alt="heroImage">
+        <!-- Logo layered on top of hero image -->
+        <div class="logo-container">
+            <img class="logo-image" src="Images/logo.png" alt="logo">
+        </div>
+
+        <!-- Birds -->
+        <div class="bird-container">
+            <img class="bird1" src="Images/solo1.gif" alt="bird">
+            <img class="bird2" src="Images/solo2.gif" alt="bird">
+            <img class="bird3" src="Images/solo3.gif" alt="bird">
+        </div>  
+
+        <!-- Navigation // Layered on top of hero image -->
+        <div class="nav-container">
+            <nav class="nav-bar1">
+                <ul>
+                    <li><a href="#About">ABOUT</a></li>
+                    <li><a href="#Involved">GET INVOLVED</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-bar2">
+                <ul>
+                    <li><a href="#Adopt">ADOPT</a></li>
+                    <li><a href="#Donate">DONATE NOW</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Hero Header Tagline -->
+        <h1 class="tagline"> REGENERATE<BR>  NATURE BY 2030</h1>
+        <!-- Button -->
+        <div class="hero-button">
+            <a href="#action" class="button"> LEARN MORE </a>
+        </div>      
+
+        <sl-icon-button name="volume-up" id="sound-btn"></sl-icon-button>
+    </div>
+
+    <!-- Section 1 // PROBLEMS SECTION-->
+    <!-- Image Carousel using Swiper.js-->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <!-- Slide #1-->
+            <div class ='swiper-slide'>
+                <img src="Images/deforestation.png" alt="deforestation">
+                <div class="swiper-slide-content">
+                    <div class="swiper-slide-title">Deforestation and<br> Habitat Loss</div>
+                    <div class="swiper-slide-body">
+                        Deforestation is the purposeful clearing of forested land. Throughout history and into modern times, <br>
+                        forests have been razed to make space for agriculture and animal grazing, and to obtain wood for fuel, manufacturing, <br>
+                        and construction.Deforestation has greatly altered landscapes around the world. About 2,000 years ago, 80 percent of Western <br>
+                        Europe was forested; today the figure is 34 percent. In North America, about half of the forests in the eastern part of the <br>
+                        continent were cut down from the 1600s to the 1870s for timber and agriculture. China has lost great expanses of its forests <br>
+                        over the past 4,000 years and now just over 20 percent of it is forested. Much of Earth’s farmland was once forests.<br>
+                    </div>
+                    <!-- Shoelace UI Button-->
+                    <sl-button class="problems-button" id="problems1">TAKE ACTION NOW</sl-button>
+                </div>
+            </div>
+            <!-- Slide #2-->
+            <div class ='swiper-slide'>
+                <img src="Images/climate.png" alt="climate">
+                <div class="swiper-slide-content">
+                    <div class="swiper-slide-title">Climate Change</div>
+                    <div class="swiper-slide-body">
+                        Climate change is the large-scale and long-term shift in the average temperature <br>
+                        and weather patterns over an observable period on both regional and global scales.There are different climates worldwide, <br>
+                        such as tropical, dry and moderate. As a large country, Australia has a variety of climates. The climate of an area determines <br>
+                        its seasons and when they come and go. This, in turn, affects the type of plants that grow and which animals survive. <br>
+                        The species and places we love depend on intricate ecosystems, and even small changes to the climate can disrupt the delicate balance of nature. <br>
+                        While Earth's climate has been constantly changing, the last 200 years have seen it change at a rate that has not been seen in <br>
+                        the past 10,000 years. 
+                    </div>
+                    <sl-button class="problems-button">TAKE ACTION NOW</sl-button>
+                </div>
+            </div>
+            <!-- Slide #3-->
+            <div class ='swiper-slide'>
+                <img src="Images/plastic.png" alt="plastic">
+                <div class="swiper-slide-content">
+                    <div class="swiper-slide-title">Plastic Pollution</div>
+                    <div class="swiper-slide-body">
+                        For the past five years, WWF-Australia has been monitoring the progress of all states <br>
+                        and territories in banning the most harmful and unnecessary single-use plastic products, <br>
+                        that pose the greatest risk if leaked into the environment. Our 'State of Plastics in Australia' scorecard was <br> 
+                        first published in 2019, and since then we've seen impressive progress right across the country. The sea of red we <br>
+                        saw in  has been replaced by a, meaning most states and territories have banned most products we track, and others <br>
+                        have plans under way to do so.<br>
+                    </div>
+                    <sl-button class="problems-button">TAKE ACTION NOW</sl-button>
+                </div>
+            </div>
+            <!-- Slide #4-->
+            <div class ='swiper-slide'>
+                <img src="Images/rhino.png" alt="rhino">
+                <div class="swiper-slide-content">
+                    <div class="swiper-slide-title">Poaching</div>
+                    <div class="swiper-slide-body">
+                        Wildlife crime is a big business. Run by dangerous international networks, wildlife and animal parts are trafficked <br>
+                        much like illegal drugs and arms. By its very nature, it is almost impossible to obtain reliable figures for the value<br>
+                        of the illegal wildlife trade. It is estimated to run into billions of dollars.Some examples of illegal wildlife trade are <br>
+                        well known, such as the poaching of elephants for ivory and tigers for their skins and bones. However, countless other <br>
+                        species are similarly overexploited, from marine turtles to timber trees. Not all wildlife trade is illegal. Wild plants and <br>
+                        animals from tens of thousands of species are caught or harvested from the wild and then sold legitimately as food, pets, <br>
+                        ornamental plants, leather, tourist ornaments, and medicine
+                    </div>
+                    <sl-button class="problems-button">TAKE ACTION NOW</sl-button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission Statement -->
+        <div class="mission-line"><p class="text">“Our mission is to restore and regenerate our Sky, Country and Saltwater.”</p></div>
+        <!-- Pagination Dots & Next/Prev Arrow Button-->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- WHERE WE WORK CARDS SECTION-->
+    <!-- Using GSAP ScrollTo & ScrollTrigger-->
+    <div class="cards">
+        <!-- Scrolling Text -->
+        <div class="scroll-text-container">
+            <div class="scroll-text">WHERE WE WORK - WHERE WE WORK- WHERE WE WORK- WHERE WE WORK- WHERE WE WORK</div>
+        </div>
+        <!-- Card #1-->
+        <div class="card card-1">
+            <div class="card-image">
+                <img src="Images/koala.png" alt="Koala">
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">SPECIES</h2>
+                <p class="card-description">
+                    Australia is home to some of the world's most beautiful nature and iconic wildlife found anywhere on the planet. 
+                    Together, we can Regenerate Nature and save our unique wildlife. 
+                    The future of Australian species depends on trees - and your support today. 
+                    Make a donation to help plant and protect trees and give our beloved native animals a future.  
+                </p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Card #2-->
+        <div class="card card-2">
+            <div class="card-image">
+                <img src="Images/oceans.png" alt="oceans">
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">OCEAN</h2>
+                <p class="card-description">
+                    We are all connected by our oceans. Australia is surrounded by breathtaking coastlines and oceans that are home to a 
+                    magnificent array of marine wildlife. 
+                    Not only that, but our seas give us life. 
+                    They provide oxygen and food and allow us to explore an underwater world of natural beauty.
+                </p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Card #3-->
+        <div class="card card-3">
+            <div class="card-image">
+                <img src="Images/people.png" alt="people">
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">PEOPLE</h2>
+                <p class="card-description">
+                    WWF-Australia's approach recognises that long-term conservation and robust natural resource management is only 
+                    possible and successful when it is sustained by, and beneﬁts, local people and communities.
+                </p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Get Involved Section -->
+    <!-- Pure CSS -->
+    <div class="get-involved">
+        <!-- Again use GSAP Scroll Trigger for the title-->
+        <div class="get-involved-message">
+            <div class="message-scroll">GET INVOLVED - GET INVOLVED - GET INVOLVED - GET INVOLVED - GET INVOLVED</div>
+        
+            <!-- Span element for each slider point -->
+            <span class="slider" id="slider1"></span>
+            <span class="slider" id="slider2"></span>
+            <span class="slider" id="slider3"></span>
+            <span class="slider" id="slider4"></span>
+    
+            <!-- Container to Hold all images.-->
+            <div class="imgContainer">
+                <!-- Tab #1-->
+                <div class="slide_div" id="slide_1">
+                    <div class="slide_title">DONATIONS</div>
+                    <div class="slide_btn"><sl-button class="press-button" id="btn1">Learn More</sl-button></div>
+                    <img src="Images/fish.png" alt="fish" class="img" id="img1">
+                    <a href="#slider1" class="button_involved" id="button1"></a>
+                </div>
+                
+                <!-- Tab #2-->
+                <div class="slide_div" id="slide_2">
+                    <div class="slide_title">ADOPT</div>
+                    <div class="slide_btn"><sl-button class="press-button" id="btn2">Learn More</sl-button></div>
+                    <img src="Images/adopt.png" alt="adopt" class="img" id="img2">
+                    <a href="#slider2" class="button_involved" id="button2"></a>
+                </div>
+    
+                <!-- Tab #3-->
+                <div class="slide_div" id="slide_3">
+                    <div class="slide_title">FUNDRAISER</div>
+                    <div class="slide_btn"><sl-button class="press-button" id="btn3">Learn More</sl-button></div>
+                    <img src="Images/fundraiser.png" alt="fundraiser" class="img" id="img3">
+                    <a href="#slider3" class="button_involved" id="button3"></a>
+                </div>
+    
+                <!-- Tab #4-->
+                <div class="slide_div" id="slide_4">
+                    <div class="slide_title">VOLUNTEER</div>
+                    <div class="slide_btn"><sl-button class="press-button" id="btn4">Learn More</sl-button></div>
+                    <img src="Images/Volunteer.png" alt="volunteer" class="img" id="img4">
+                    <a href="#slider4" class="button_involved" id="button4"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSR PARTNER SECTION -->
+    <section class="partner-section">
+        <!-- Timeline with SVG Paw Prints -->
+        <div class="icon-container">
+            <!-- A constantly bouncing message -->
+            <div class="hover-message">Hover The Paws For More Info!</div>
+            <!-- Each SVG icon with embedded tooltip -->
+            <!--Paw #1-->
+            <div class="icon">
+                <!--SVG Icon-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 144" width="100%" height="100%">
+                    <ellipse class="cls-1" cx="58.5" cy="46.3" rx="11.2" ry="16.5" transform="translate(-7.2 10.9) rotate(-10)"/>
+                    <ellipse class="cls-1" cx="39.3" cy="69.7" rx="10.1" ry="14.9" transform="translate(-16.7 12.5) rotate(-15)"/>
+                    <path class="cls-1" d="M96.8,84.8c-7-6-6.4-20.9-23.3-20.9s-16.3,14.9-23.3,20.9c-7.6,6.5-10.6,7.6-10.6,15.6s7.8,13.6,16,13.6c5.8,0,11.7-2.3,17.9-2.3s12.1,2.3,17.9,2.3c8.2,0,16-2.9,16-13.6s-3-9.2-10.6-15.6Z"/>
+                    <ellipse class="cls-1" cx="88.5" cy="46.3" rx="16.5" ry="11.2" transform="translate(27.5 125.4) rotate(-80)"/>
+                    <ellipse class="cls-1" cx="107.7" cy="69.7" rx="14.9" ry="10.1" transform="translate(12.6 155.7) rotate(-75)"/>
+                </svg>
+                <!-- Tooltip Box-->
+                <div class="tooltip">
+                    <h3>Step 1: Define Your Sustainability Goals</h3>
+                    <p>The first step to working with us is to identify
+                        your company's sustainability goals and find out whether 
+                        we are compatible.
+                    </p>
+                </div>
+            </div>
+
+            <!--Paw #2-->
+            <div class="icon">
+                <!--SVG Icon-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 144" width="100%" height="100%">
+                    <ellipse class="cls-1" cx="58.5" cy="46.3" rx="11.2" ry="16.5" transform="translate(-7.2 10.9) rotate(-10)"/>
+                    <ellipse class="cls-1" cx="39.3" cy="69.7" rx="10.1" ry="14.9" transform="translate(-16.7 12.5) rotate(-15)"/>
+                    <path class="cls-1" d="M96.8,84.8c-7-6-6.4-20.9-23.3-20.9s-16.3,14.9-23.3,20.9c-7.6,6.5-10.6,7.6-10.6,15.6s7.8,13.6,16,13.6c5.8,0,11.7-2.3,17.9-2.3s12.1,2.3,17.9,2.3c8.2,0,16-2.9,16-13.6s-3-9.2-10.6-15.6Z"/>
+                    <ellipse class="cls-1" cx="88.5" cy="46.3" rx="16.5" ry="11.2" transform="translate(27.5 125.4) rotate(-80)"/>
+                    <ellipse class="cls-1" cx="107.7" cy="69.7" rx="14.9" ry="10.1" transform="translate(12.6 155.7) rotate(-75)"/>
+                </svg>
+                <!-- Tooltip Box-->
+                <div class="tooltip">
+                    <h3>Step 2: Find Out if Our Interests Align</h3>
+                    <p>Every good collaboration requires good understanding
+                        of each other. So, feel free to look at how we have worked
+                        with other companies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Paw #3 -->
+            <div class="icon">
+                <!--SVG Icon-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 144" width="100%" height="100%">
+                    <ellipse class="cls-1" cx="58.5" cy="46.3" rx="11.2" ry="16.5" transform="translate(-7.2 10.9) rotate(-10)"/>
+                    <ellipse class="cls-1" cx="39.3" cy="69.7" rx="10.1" ry="14.9" transform="translate(-16.7 12.5) rotate(-15)"/>
+                    <path class="cls-1" d="M96.8,84.8c-7-6-6.4-20.9-23.3-20.9s-16.3,14.9-23.3,20.9c-7.6,6.5-10.6,7.6-10.6,15.6s7.8,13.6,16,13.6c5.8,0,11.7-2.3,17.9-2.3s12.1,2.3,17.9,2.3c8.2,0,16-2.9,16-13.6s-3-9.2-10.6-15.6Z"/>
+                    <ellipse class="cls-1" cx="88.5" cy="46.3" rx="16.5" ry="11.2" transform="translate(27.5 125.4) rotate(-80)"/>
+                    <ellipse class="cls-1" cx="107.7" cy="69.7" rx="14.9" ry="10.1" transform="translate(12.6 155.7) rotate(-75)"/>
+                </svg>
+                <!--Tooltip Box-->
+                <div class="tooltip">
+                    <h3>Step 3: Hit us Up!</h3>
+                    <p>Almost there! If everything is good, feel free to Hit
+                        us up and lets work together!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Paw #4-->
+            <div class="icon 4">
+                <!--SVG Icon-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 144" width="100%" height="100%">
+                    <ellipse class="cls-1" cx="58.5" cy="46.3" rx="11.2" ry="16.5" transform="translate(-7.2 10.9) rotate(-10)"/>
+                    <ellipse class="cls-1" cx="39.3" cy="69.7" rx="10.1" ry="14.9" transform="translate(-16.7 12.5) rotate(-15)"/>
+                    <path class="cls-1" d="M96.8,84.8c-7-6-6.4-20.9-23.3-20.9s-16.3,14.9-23.3,20.9c-7.6,6.5-10.6,7.6-10.6,15.6s7.8,13.6,16,13.6c5.8,0,11.7-2.3,17.9-2.3s12.1,2.3,17.9,2.3c8.2,0,16-2.9,16-13.6s-3-9.2-10.6-15.6Z"/>
+                    <ellipse class="cls-1" cx="88.5" cy="46.3" rx="16.5" ry="11.2" transform="translate(27.5 125.4) rotate(-80)"/>
+                    <ellipse class="cls-1" cx="107.7" cy="69.7" rx="14.9" ry="10.1" transform="translate(12.6 155.7) rotate(-75)"/>
+                </svg>
+                <!--Tooltip Box-->
+                <div class="tooltip">
+                    <h3>Step 4: Wait For A Reply and Fill Out A Form</h3>
+                    <p>Now, all you have to do is just wait for us to Reply
+                        and at the mean time, you can fill out a form to help us better 
+                        understand your company's values.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Paw #5-->
+            <div class="icon">
+                <!--SVG Icon-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147 144" width="100%" height="100%">
+                    <ellipse class="cls-1" cx="58.5" cy="46.3" rx="11.2" ry="16.5" transform="translate(-7.2 10.9) rotate(-10)"/>
+                    <ellipse class="cls-1" cx="39.3" cy="69.7" rx="10.1" ry="14.9" transform="translate(-16.7 12.5) rotate(-15)"/>
+                    <path class="cls-1" d="M96.8,84.8c-7-6-6.4-20.9-23.3-20.9s-16.3,14.9-23.3,20.9c-7.6,6.5-10.6,7.6-10.6,15.6s7.8,13.6,16,13.6c5.8,0,11.7-2.3,17.9-2.3s12.1,2.3,17.9,2.3c8.2,0,16-2.9,16-13.6s-3-9.2-10.6-15.6Z"/>
+                    <ellipse class="cls-1" cx="88.5" cy="46.3" rx="16.5" ry="11.2" transform="translate(27.5 125.4) rotate(-80)"/>
+                    <ellipse class="cls-1" cx="107.7" cy="69.7" rx="14.9" ry="10.1" transform="translate(12.6 155.7) rotate(-75)"/>
+                </svg>
+                <!--Tooltip Box-->
+                <div class="tooltip">
+                    <h3>Step 5: Collaborate!</h3>
+                    <p>The final step! We are officially in collaboration now. We look
+                        forward to working with you!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline after the timeline-->
+        <h2>Partner with WWF <br> through Your CSR Program</h2>
+        <!-- Learn More Button -->
+        <div class="button-container">
+            <button class="card-button">Learn More</button>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+     <section id="end-section">
+        <div class="end-content">
+            <!-- Container for Tagline-->
+            <div class="end-message">
+                <h2>TOGETHER, WE CAN PROTECT <BR> TOMORROW'S PLANET</h2>
+                <sl-button class="end-button">TAKE ACTION NOW</sl-button>
+            </div>
+            <img class="end-img" src="Images/end.png" alt="trees">
+            
+            <!-- Bottom Footer Portin-->
+            <!-- Parent Footer Container-->
+            <div class="footer-section">
+                <!-- Child #1 // Contact Us-->
+                <div class="footer-items">
+                    <h3>Speak to Us</h3>
+                    <p>1800 032 551 <br> hello@wwf.org.au</p>
+                </div>
+
+                <!-- Child #2 // Perth Address-->
+                <div class="footer-items">
+                    <h3>Perth</h3>
+                    <p>470 Wiliamt St, <br> Perth, WA 6000</p>
+                </div>
+
+                <!-- Child #3 // Brisbane Address-->
+                <div class="footer-items">
+                    <h3>Brisbane</h3>
+                    <p>Level 4B, 340 <br> Adelaide St</p>
+                </div>
+
+                <!-- Child #4 // Melbourne Address-->
+                <div class="footer-items">
+                    <h3>Melbourne</h3>
+                    <p>553 Wiliamt St, <br> Melbourne</p>
+                </div>
+
+                <!-- Child #5 // Sydney Address-->
+                <div class="footer-items">
+                    <h3>Sydney</h3>
+                    <p>470 Wiliamt St, <br> Perth, WA 6000</p>
+                </div>
+                
+                <!-- Child #6 // Right hand Side // Back to Top Button-->
+                <div class="back-to-top">
+                    <a href="#top" class="back-btn">
+                        <span>Back To Top</span>
+                    </a>
+                    <span class="arrow">&#8593;</span>
+                </div>
+
+                <!-- Socials // Right Hand Side-->
+                <!-- Shoelace UI Icons -->
+                <div class="socials">
+                    <div class="socials-icon">
+                        <sl-icon name="facebook"></sl-icon>
+                    </div>
+    
+                    <div class="socials-icon">
+                        <sl-icon name="instagram"></sl-icon>
+                    </div>
+    
+                    <div class="socials-icon">
+                        <sl-icon name="linkedin"></sl-icon>
+                    </div>
+    
+                    <div class="socials-icon">
+                        <sl-icon name="youtube"></sl-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/shoelace-autoloader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

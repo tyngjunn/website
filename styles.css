@@ -1,0 +1,1092 @@
+/* General Styling */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html{
+    background-color: #f8f8f2;
+}
+
+/* Font face rule for custom fonts */
+
+@font-face{
+    font-family: "Quicksand";
+    src: url(fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face{
+    font-family: "Boysen";
+    src: url(fonts/Boysen\ Bold.otf);
+}
+
+/* ------------- HERO SECTION ------------- */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full Viewport Height */
+    overflow: hidden; /* Hide Overflow */
+}
+
+.hero-image {
+    position: absolute;
+    width: 110%; /* Made it larget than the container to accommodate it moving */
+    height: 110%; /* Made it larget than the container to accommodate it moving */
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+    transition: transform 0.1s ease-out;
+}
+
+/* Logo Styling */
+.logo-container{
+    position: absolute;
+    text-align: center;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-image{
+    transform: scale(0.2);
+}
+
+/* Nav Bar Styling */
+.nav-container{
+    position: absolute;
+    display: flex;
+    top: 80px;
+    left: 50%;
+    justify-content: space-between;
+    transform: translateX(-50%);
+    width: 45%;
+}
+
+.nav-bar1{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.nav-bar1 li, .nav-bar2 li{
+    margin: 0 30px;
+    list-style: none;
+}
+
+.nav-bar1 ul, .nav-bar2 ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar1 a:hover,
+.nav-bar2 a:hover{
+    color: white;
+}
+
+.nav-bar1 a, .nav-bar2 a{
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    font-family: "Quicksand";
+    font-size: 19px;
+    transition: ease 0.5s;
+
+}
+
+/* Main Tagline Styling */
+.tagline{
+    width: 100%;
+    position: absolute;
+    font-size: 6vw;
+    color: white;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Boysen";
+    text-align: center;
+}
+
+.hero-button{
+    position: absolute;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+/*Shoelace sound button styling */
+#sound-btn{
+    color:white;
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+/* Main Button Styling */
+.button{
+    padding: 15px 30px;
+    font-size: 15px;
+    font-family: "Quicksand";
+    font-weight: 500;
+    color: white;
+    background-color: #6a8363;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover */
+.button:hover {
+    background-color: #4b5b45; /* Darker shade for hover effect */
+}
+
+/* Bird Animation Container */
+.bird-container {
+    position: absolute;
+    width: 100%; /* Full width of the screen */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevents birds from overflowing outside the viewport */
+    top: 0;
+    left: 0;
+}
+
+/* GIF of birds Styling */
+
+.bird1, .bird2, .bird3{
+    position: absolute; /* Allows animation across the screen */
+    width: 35px; /* Adjust based on the size you want for the GIF */
+    left: 100px; /* Start off-screen */
+}
+
+/* Each Birds Animation */
+.bird1 {
+    transform: rotate(30deg); /* Slight rotation for it to look more natural */
+    animation: fly 10s linear infinite; /* Loop animation every 10 seconds */
+}
+
+.bird2 {
+    animation: fly2 10s linear infinite; /* Loop animation every 10 seconds */
+}
+
+.bird3 {
+    animation: fly3 10s linear infinite; /* Loop animation every 10 seconds */
+}
+
+/* Keyframes for bird flight path at 25%, 50%, 75%, and 100% */
+@keyframes fly {
+    0% {
+        left: -190px; /* Start the GIF off-screen */
+        top: 15%; /* For changing vertical flight path */
+    }
+    25%{
+        top: 20%;
+    }
+
+    50%{
+        transform: rotate(-15deg);
+        top: 30%;
+    }
+
+    75%{
+        top: 25%;
+    }
+
+    100% {
+        
+        left: 100vw; /* End off the right side of the screen */
+        top: 25%; /* The end position vertically */
+    }
+}
+
+@keyframes fly2 {
+    0% {
+        left: -100px; /* Start the GIF off-screen */
+        top: 20%; /* For changing vertical flight path */
+    }
+    25%{
+        top: 25%;
+    }
+
+    50%{
+        top: 25%;
+    }
+
+    75%{
+        top: 40%;
+    }
+
+    100% {
+        
+        left: 100vw; /* End off the right side of the screen */
+        top: 25%; /* The end position vertically */
+    }
+}
+
+@keyframes fly3 {
+    0% {
+        left: -200px; /* Start the GIF off-screen */
+        top: 20%; /* For changing vertical flight path */
+    }
+    25%{
+        top: 40%;
+    }
+
+    50%{
+        
+        top: 20%;
+    }
+
+    75%{
+        
+        top: 35%;
+    }
+
+    100% {
+        
+        left: 100vw; /* End off the right side of the screen */
+        top: 28%; /* The end position vertically */
+    }
+}
+
+/* Audio button styling */
+
+.audio-button{
+    position: absolute;
+    bottom: 50px; /* Position to bottom right */
+    right: 50px;
+    color: white;
+    font-size: 15px;
+}
+
+/* ------------- PROBLEMS CAROUSEL SECTION STYLING ------------- */
+
+/* Swiper container */
+.swiper {
+    width: 100%;
+    height: 100vh; /* Full Height and Width */
+}
+
+/* Swiper Wrapper */
+.swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Keep slides above the background */
+    display: flex; /* Display them in a row */
+}
+
+/* Styling for individual Slides */
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the images */
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Arrow Styling */
+.swiper-button-prev,
+.swiper-button-next{
+    --swiper-navigation-color: white;
+    --swiper-navigation-sides-offset: 40px;
+    --swiper-navigation-size: 70px;
+}
+
+/* Container that will be on top of the images */
+.swiper-slide-content{
+    position: absolute;
+    left: 120px;
+    top: 30%;
+}
+
+/* TITLE STYLING */
+.swiper-slide-title{
+    text-align: left;
+    font-size: 80px;
+    font-family: 'Boysen';
+    font-weight: bold;
+    line-height: 0.75;
+    color: white;
+}
+/* BODY COPY */
+.swiper-slide-body{
+    margin-top: 30px;
+    font-family: 'Quicksand';
+    line-height: 1.5;
+    font-size: 15px;
+    text-align: left;
+    color: white;
+}
+
+/* Dotted Pagination Styling at the bottom */
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active{
+    --swiper-pagination-color: white;
+    --swiper-pagination-fraction-color: inherit;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+}
+
+/* Button Styling */
+sl-button.problems-button::part(base){
+    background-color:#6a8363;
+    font-family: 'Quicksand';
+    border: 0px;
+    border-radius: 50px;
+    margin-top: 30px;
+    width: 200px;
+    position: fixed;
+    right: 82%;
+    color: white;
+}
+
+/* Button Styling */
+sl-button.problems-button::part(base):hover {
+    background-color: #4b5b45;
+    color: white;
+    transition: ease 0.5s;
+  }
+
+/* Mission Statement Container */
+.mission-line{
+    display: inline-block;
+}
+
+/* Mission Text Styling */
+.text{
+    font-size: 1.3em;
+    font-family: 'Boysen';
+    color: #e5d4b4;
+    position: absolute;
+    text-align: center;
+    bottom: 5%;
+    left: 30%;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* ------------- WHERE WE WORK SECTION STYLING ------------- */
+
+.scroll-text-container {
+    position: absolute;
+    top: 20px;
+    overflow: hidden;
+    width: 100%;
+    background-color: #f8f8f2; /* Background color matching the image */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.scroll-text {
+    font-family: 'boysen';
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents line breaks */
+    display: inline-block;
+    transform: translate(100%,0);
+    color: #000;
+}
+
+/* Parent Container */
+.cards {
+    background-color: #f8f8f2;
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* General Card Styling */
+.card{
+    position: absolute;
+    margin-top: 100px;
+    width: 80%;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-bottom: 50px ;
+}
+
+/* Card #1 // SPECIES */
+.card-1{
+    background-color:#4b5b45;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 0px;
+}
+
+/* Card #2 // OCEAN */
+.card-2{
+    transform: translate(-50%,0);
+    background-color: #23788e;
+    left: 50%;
+    top: 30px;
+}
+
+/* Card #3 // PEOPLE */
+.card-3{
+    background-color: #8c6239;
+    transform: translate(-50%,0);
+    left: 50%;
+    top: 60px;
+}
+
+/* Targeting H2 Tags within each card */
+.card h2{
+    font-size: 80px;
+    font-family: 'boysen';
+    color: white;
+}
+
+/* Card image styling */
+.card-image img {
+    margin-left: 40px;
+    width: 80%; /* Adjust image width */
+    height: 90%;
+    border-radius: 60px; /* Rounded corners for the image */
+}
+
+/* Card content styling */
+.card-content {
+    transform: translate(-20%,0);
+    color: white;
+}
+
+/* Card title styling */
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #F8F8F8; /* Off-white color for the title */
+}
+
+/* Card description styling */
+.card-description {
+    font-family: 'quicksand';
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #F0F0F0; /* Light grey color for the description text */
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.card-button {
+    background-color: #333333; /* Dark button background */
+    color: #F8F8F8; /* White text */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #555555; /* Darker color on hover */
+}
+/* ---------GET INVOLVED SECTION STYLING---------- */
+
+/* Parent Container */
+.get-involved {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Styling for the title scrolling animation */
+.get-involved-message{
+    justify-content: center;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* The message itself */
+.message-scroll{
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'boysen';
+    font-size: 4rem;
+    transform: translateX(-100%);
+    font-weight: bold;
+}
+
+/* Image Container  for all images in the section */
+.imgContainer{
+    width: 100%;
+    height: 700px;
+    top: 20%;
+    transform: translateX(22%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+/* Individual Slide styling */
+/* Each image is contained within this container */
+.slide_div{
+    display: flex;
+    align-items: center;
+    margin: 0 30px 0 30px;
+}
+
+/*Titles for each slide */
+.slide_title {
+    position: absolute; /* Overlay on top of image */
+    top: 50%; /* vertically center title */
+    font-family: 'Boysen';
+    color: white;
+    font-size: 2em;
+    margin: 0;
+    padding-left: 50px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Button Styling */
+.slide_btn{
+    position: absolute;
+    bottom: 30%; /* Position title at the top of the image */
+    font-family: 'Boysen';
+    color: white;
+    font-size: 2em;
+    margin: 0;
+    padding-left: 100px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Image styling */
+.img{
+    object-fit: cover;
+    position: relative;
+    height: 400px;
+    width: 300px;
+    filter: saturate(5%);
+    transition: 0.7s;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.4);
+}
+/* The overlay button that covers each image */
+/* This is what users click when they click on the image */
+.button_involved{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    transition: 0.7s;
+    border-radius: 20px;
+}
+
+/*Default Visibility is none */
+#btn1,
+#btn2,
+#btn3,
+#btn4{
+    visibility: hidden;
+}
+
+/*Styling for each 'Learn More' Button */
+sl-button.press-button::part(base){
+    background-color:#6a8363;
+    font-family: 'Quicksand';
+    border: 0px;
+    border-radius: 50px;
+    width: 120%;
+    color: white;
+}
+
+/* Hover Effect */
+sl-button.press-button::part(base):hover {
+    background-color: #4b5b45;
+    color: white;
+    transition: ease 0.5s;
+  }
+
+/* Targeted Styling */
+/* Expands each image and button on target selection */
+#slider1:target ~ .imgContainer #img1,
+#slider1:target ~ .imgContainer #button1{
+    /*Increase size */
+    width: 390px;
+    height: 600px;
+    /*Remove BG */
+    background-color: transparent;
+    filter: saturate(100%)
+}
+
+
+/* Show Visibility when image is enlarged click */
+#slider1:target ~ .imgContainer #btn1,
+#slider2:target ~ .imgContainer #btn2,
+#slider3:target ~ .imgContainer #btn3,
+#slider4:target ~ .imgContainer #btn4{
+    left: 20%;
+    visibility: visible;
+}
+
+/* Targeted Styling for Slide 2 */
+#slider2:target ~ .imgContainer #img2,
+#slider2:target ~ .imgContainer #button2{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%)
+}
+
+/* Targeted Styling for Slide 3 */
+#slider3:target ~ .imgContainer #img3,
+#slider3:target ~ .imgContainer #button3{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%)
+}
+
+/* Targeted Styling for Slide 4 */
+#slider4:target ~ .imgContainer #img4,
+#slider4:target ~ .imgContainer #button4{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%)
+}
+
+/* Positionings CSS */
+
+#slider1:target ~ .img{
+    left: 30%;
+}
+
+#slider2:target ~ .img{
+    left: 20%;
+}
+
+#slider3:target ~ .img{
+    left: 10%;
+}
+
+#slider4:target ~ .img{
+    left: 0%;
+}
+
+/* -------------- CSR PARTNER SECTION -------------- */
+
+
+/*Parent Container */
+.partner-section {
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+}
+
+/* Targeting H1 tags */
+.partner-section h2 {
+    font-family: "boysen";
+    font-size: 3rem;
+    margin-top: 40px;
+}
+
+/* Line and Icon Container */
+.icon-container {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* The 'Line' for the timeline */
+.icon-container::before {
+    content: '';
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #333;
+    transform: translate(5%,100%);
+    z-index: 0;
+}
+
+/* General icon styling */
+.icon {
+    stroke: #000;
+    stroke-width: 2px;
+    position: relative;
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+    cursor: pointer;
+}
+
+/*SVG Paw Print Styling */
+.icon svg path,
+.icon svg ellipse {
+    stroke-dasharray: 200; /* The length and space pattern, for 'draw' animation */
+    stroke-dashoffset: 200; /* Start off with hiding strokes, make it appear empty.*/
+    fill: #6a8363;
+    transition: fill 1s ease; /* Smooth fill transition */
+}
+
+/* Hover Effect */
+.icon:hover svg path,
+.icon:hover svg ellipse {
+    animation: animate-icon 1.5s linear forwards;
+}
+
+/* SVG Animation */
+@keyframes animate-icon {
+    0% {
+        stroke-dashoffset: 180; /* Initial offset at 0%, partially hiding outline */
+        fill: none; /* No fill initially */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Draw the entire path */
+        fill:#4b5b45; /* Add fill at the end of animation */
+    }
+}
+
+/* The hovering message above the timeline // Indicator */
+.hover-message {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    opacity: 0.5;
+    font-family: 'Boysen';
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: black;
+    font-weight: bold;
+    animation: bounce 1.5s infinite;
+}
+
+/* Simple Bounce Animation for the hover message */
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
+
+/* General Tooltip Styling */
+.tooltip {
+    display: none; /* Default is invisibile */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    padding: 15px;
+    background-color: #f8f8f2;
+    border: 3px solid #6d8963;
+    border-radius: 20px;
+    color: #333;
+    text-align: left;
+    z-index: 3;
+}
+
+/* h3 tags */
+.tooltip h3{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: "boysen";
+}
+
+/* p tags */
+.tooltip p{
+    font-family: "quicksand";
+    font-size: 0.8em;
+}
+
+/* Show on Hover */
+.icon:hover .tooltip {
+    display: block;
+}
+
+/* General Button Styling */
+.button-container {
+    margin-top: 40px;
+}
+
+/* Button Styling */
+.learn-more-btn {
+    padding: 10px 20px;
+    background-color: #88B04B;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hover */
+.learn-more-btn:hover {
+    background-color: #4CAF50;
+}
+
+/* --------- LAST SECTION ----------- */
+
+/* Parent Container */
+.end-section{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Full height and width container */
+.end-content{
+    width: 100%;
+    height: 100vh;
+}
+
+/* Image Container */
+.end-img{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+/* The title styling */
+.end-message{
+    position: relative;
+    top: 50%;
+    padding: 20px;
+    z-index: 1;
+}
+
+/*Target h2 */
+.end-message h2{
+    font-family: 'Boysen';
+    font-size: 6em;
+    color: whitesmoke;
+}
+
+/* Button styling */
+sl-button.end-button::part(base){
+    background-color:#6a8363;
+    font-family: 'Quicksand';
+    border: 0px;
+    border-radius: 50px;
+    margin-top: 15px;
+    width: 120%;
+    color: white;
+    position: relative;
+}
+
+/*Button Styling on Hover */
+sl-button.end-button::part(base):hover {
+    background-color: #4b5b45;
+    color: white;
+    transition: ease 0.5s;
+  }
+
+/* Bottom portion of the last section */
+/*Parent Container */
+.footer-section{
+    display: flex;
+    position: relative;
+    max-height: 100%;
+    padding: 20px;
+    top: 75%;
+    width:100%;
+}
+
+/* Styling for the each item */
+/* Each item container uses this class  // Sydney, Perth, etc.. */
+.footer-items{
+    margin-right: 80px;
+    line-height: 1.7em;
+    font-size: 1.1em;
+}
+
+/*Targteing h3 tags*/
+.footer-items h3{
+    font-family: 'Quicksand';
+    color: white;
+}
+
+/* Target p Tags*/
+.footer-items p{
+    font-family: 'Quicksand';
+    color: #e5d4b4;
+}
+
+/* The White Line */
+.footer-section::before {
+    content: '';
+    width: 98%;
+    position: absolute;
+    top: 100%;
+    height: .1em;
+    background-color: white;
+    z-index: 0;
+}
+
+/* Back to top button */
+.back-btn {
+    display: flex;
+    color: #ffffff; /* Adjust the color to match the background */
+    font-family: 'Quicksand';
+    font-size: 1.4em;
+    text-decoration: none;
+    position: absolute;
+    font-weight: 700;
+    top: 50%;
+    right: 90px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/*Arrow using the same bounce animation done earlier */
+.back-to-top .arrow {
+    color: white;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    font-size: 3rem;
+    background: none;
+    animation: bounce 1.5s infinite;
+}
+
+/* Socials Container */
+.socials{
+    padding: 20px;
+    z-index: 1000;
+    bottom: -60%;
+    position: absolute;
+    display: flex;
+    right: 40px;
+}
+
+/* Icon styling */
+.socials-icon{
+    font-size: 1.5em;
+    margin-right: 20px;
+    color: white;
+}
+
+.socials-icon:hover{
+    color: green;
+    transition: ease 0.5s;
+}
+
+/* ------------- Media Queries -------------------*/
+
+@media only screen and (max-width: 360px) { 
+
+/* Navigation Bar */
+    .logo-image{
+        transform: scale(0.15);
+        text-align: left;
+        justify-content: left;
+    }
+    
+    .nav-container{
+        width: 100%;
+    }
+    
+    .nav-bar1,
+    .nav-bar2{
+        display: none;
+    }
+   
+    .tagline{
+        font-size: 3em;
+    }
+
+/* Problems */
+
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    --swiper-navigation-color: white;
+    --swiper-navigation-sides-offset: 40px;
+    --swiper-navigation-size: 20px;
+}
+
+.swiper-slide-content{
+    position: absolute;
+    margin-left: -90px;
+    top: 20%;
+}
+
+.swiper-slide-title{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Boysen';
+    font-weight: bold;
+    line-height: 1;
+    color: white;
+}
+
+/* Display None to reduce visual clutter */
+.swiper-slide-body{
+    display: none;
+}
+
+sl-button.problems-button::part(base){
+    background-color:#6a8363;
+    font-family: 'Quicksand';
+    border: 0px;
+    border-radius: 50px;
+    margin-top: 35px;
+    width: 120%;
+    color: white;
+    position: relative;
+    left: -25%;
+}
+
+}
